@@ -1,0 +1,21 @@
+<div class="row align-items-center">
+    <div class="card">
+        <div class="card-header bg-primary text-light">
+            <h1 class="card-title text-left text-light">List of Participants</h1>
+            <div class="container text-center mt-10">
+                <button class="btn btn-secondary" (click)="allStudents()">All Students</button>
+                <button class="btn btn-secondary" (click)="gender('male')">Male</button>
+                <button class="btn btn-secondary" (click)="gender('female')">Female</button>
+            </div>
+        <div class="card">
+            <div class="list-group" *ngFor="let students of person">
+                <li class="list-group-item">
+                    <span>{{students.name}}</span>
+                    <span class="float-end">{{students.age + " years old"}} </span>
+                </li>
+            </div>
+        </div>
+            
+        </div>
+    </div>
+</div>
